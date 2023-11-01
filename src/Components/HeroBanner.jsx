@@ -2,7 +2,9 @@ import React from 'react';
 import {View, Image, StyleSheet, Dimensions, Text} from 'react-native';
 import RadialGradient from 'react-native-radial-gradient';
 import LogoWithText from '../assets/Logituit_logo.png';
+
 const {width, height} = Dimensions.get('window');
+
 const HeroBanner = ({imageUrl, title, description}) => {
   return (
     <>
@@ -20,25 +22,12 @@ const HeroBanner = ({imageUrl, title, description}) => {
         center={[width + 29, height / 10]}
         radius={width}
       />
-      <View style={{position: 'relative', top: '40%', left: '5%'}}>
-        <Text style={{color: 'white', fontSize: 30}}>
-          {title || 'ABSBSBBDS'}
-        </Text>
-        <Text style={{color: 'white'}}>
-          {description || 'jdgsadjashuagjahcsahgd huahd uhda dwjhd '}
-        </Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.titleText}>{title}</Text>
+        <Text style={styles.descriptionText}>{description}</Text>
       </View>
-      <View
-        style={{
-          position: 'relative',
-          width: '10%',
-          height: '10%',
-          left: '5%',
-        }}>
-        <Image
-          style={{width: '100%', height: '100%', resizeMode: 'cover'}}
-          source={LogoWithText}
-        />
+      <View style={styles.logoContainer}>
+        <Image style={styles.logoImage} source={LogoWithText} />
       </View>
     </>
   );
@@ -55,9 +44,32 @@ const styles = StyleSheet.create({
   },
   heroBannerImage: {
     flex: 1,
-    // marginLeft: '20%'    ,
     width: '100%',
     height: height,
+  },
+  textContainer: {
+    position: 'relative',
+    top: '40%',
+    left: '5%',
+  },
+  titleText: {
+    color: 'white',
+    fontSize: 35,
+    fontFamily: 'Roboto',
+  },
+  descriptionText: {
+    color: 'white',
+  },
+  logoContainer: {
+    position: 'relative',
+    width: '7%',
+    height: '7%',
+    left: '5%',
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'center',
   },
 });
 

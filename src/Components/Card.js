@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     borderRadius: 30,
     margin: 8,
-    shadowColor: 'black',
+    shadowColor: 'black', 
     shadowRadius: 2,
     width: 250,
     height: 150,
