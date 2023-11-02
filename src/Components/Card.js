@@ -43,22 +43,26 @@ const Card = ({
       onBlur={handleBlur}
       onMouseEnter={handleFocus}
       onMouseLeave={handleBlur}>
-      <View
-        style={[
-          styles.cardContainer,
-          isFocused && styles.focused, // Apply focused style when isFocused is true
-        ]}>
+      <View style={[styles.cardContainer]}>
         <Image
           source={
             imageSource || {
               uri: thumbnail_url || 'https://i.imgur.com/66xXWPa.jpg',
             }
           }
-          style={[styles.image, imageStyle]}
+          style={[
+            styles.image,
+            imageStyle,
+            isFocused && styles.focused, // Apply focused style when isFocused is true
+          ]}
         />
+
         <Text style={[styles.title, titleStyle]}>
-          {title || data.title || 'Test'}
+          {title || data.thumbnametitle || 'Test'}
         </Text>
+        {data?.duration && (
+          <Text style={[styles.description, titleStyle]}>{data.duration}</Text>
+        )}
       </View>
     </TouchableWithoutFeedback>
   );
@@ -66,27 +70,33 @@ const Card = ({
 
 const styles = StyleSheet.create({
   cardContainer: {
-    borderRadius: 30,
+    borderRadius: 20,
     margin: 8,
-    shadowColor: 'black', 
+    shadowColor: 'black',
     shadowRadius: 2,
     width: 250,
-    height: 150,
+    height: 200,
   },
   focused: {
     borderColor: 'white',
     borderWidth: 4,
   },
   image: {
-    borderRadius: 30,
+    borderRadius: 20,
     width: '100%',
-    height: '100%',
+    height: '70%',
     resizeMode: 'cover',
   },
   title: {
     fontSize: FontSize.cardTitle,
-    color: Color.logituitWhite700,
+    color: Color.tickerWhite,
     marginTop: 8,
+    marginLeft: '3%',
+  },
+  description: {
+    fontSize: FontSize.androidDescripion_size,
+    color: Color.logituitWhite700,
+    marginLeft: '3%',
   },
 });
 

@@ -5,7 +5,7 @@ export const FontFamily = {
   };
   /* font sizes */
   export const FontSize = {
-    androidDescripion_size: 24,
+    androidDescripion_size: 14,
     androidTitle2_size: 32,
     androidTitle1_size: 48,
   };

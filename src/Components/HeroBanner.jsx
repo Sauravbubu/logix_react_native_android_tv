@@ -59,6 +59,8 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     color: 'white',
+    width: '60%',
+    marginLeft: 5,
   },
   logoContainer: {
     position: 'relative',
