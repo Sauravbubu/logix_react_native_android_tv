@@ -11,6 +11,7 @@ import {
 import Card from './Card';
 import {Image} from 'react-native';
 import Logo from '../assets/logo.png';
+import * as AndroidBridge from './../AndroidBridgeHelper';
 const Tray = ({title, cardDataTray, cards, setFocusedCard, onCardBlur}) => {
   const {width, height} = Dimensions.get('window');
 
@@ -26,11 +27,15 @@ const Tray = ({title, cardDataTray, cards, setFocusedCard, onCardBlur}) => {
     }
   };
 
+  const handleCardClick = video_url => {
+    console.log('first clicked')
+    AndroidBridge.openExampleActivity(video_url);
+  };
   return (
     <View>
       <View
         style={{
-          width:'20%',
+          width: '20%',
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
@@ -44,7 +49,7 @@ const Tray = ({title, cardDataTray, cards, setFocusedCard, onCardBlur}) => {
             cardDataTray={cardDataTray}
             key={index}
             data={card}
-            onPress={() => {}}
+            onPress={handleCardClick}
             onFocus={() => handleCardFocus(card)} // Handle card focus
             onBlur={handleCardBlur} // Handle card blur
           />

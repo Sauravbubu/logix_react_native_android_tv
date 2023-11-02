@@ -1,3 +1,4 @@
+//mainActivity.java
 package com.demo1;
 
 import com.facebook.react.ReactActivity;

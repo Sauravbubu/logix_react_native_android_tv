@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {Color, FontSize} from '../GlobalStyles';
 import {TouchableWithoutFeedback} from 'react-native';
@@ -21,7 +21,7 @@ const Card = ({
     : data.thumbnail_url;
 
   const [isFocused, setIsFocused] = useState(false);
-
+  const [imageSrc, setImageSrc] = useState({image: Logo});
   const handleFocus = () => {
     setIsFocused(true);
     if (onFocus) {
@@ -38,7 +38,7 @@ const Card = ({
 
   return (
     <TouchableWithoutFeedback
-      onPressIn={() => onPress(data.video_url)}
+      onPress={() => onPress(data.video_url)}
       onFocus={handleFocus}
       onBlur={handleBlur}
       onMouseEnter={handleFocus}
