@@ -19,7 +19,7 @@
     "react-native": "npm:react-native-tvos@0.72.6-0",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-radial-gradient": "^1.1.3",
-    "react-native-snap-carousel": "^3.9.1",
+    "react-native-splash-screen": "^3.3.0",
     "react-native-video": "^5.2.1"
   },
   "devDependencies": {

@@ -1,11 +1,19 @@
 import React, {useState} from 'react';
-import {View, Image, Text, ActivityIndicator, ScrollView} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  ActivityIndicator,
+  Dimensions,
+  ScrollView,
+} from 'react-native';
 import Tray from '../Components/Tray';
 import useFetch from '../Hooks/useFetch';
 import {cardsApi, catchupApi} from '../constant';
 import HeroBanner from '../Components/HeroBanner';
-
+import Logo from '../assets/Logituit_logo.png';
 const HomeScreen = ({navigation}) => {
+  const {width, height} = Dimensions.get('window');
   const {data, loading, error} = useFetch(cardsApi);
   const {
     data: dataFromCatchupApi,
@@ -16,8 +24,20 @@ const HomeScreen = ({navigation}) => {
 
   if (loading) {
     return (
-      <View>
-        <ActivityIndicator size="large" />
+      <View
+        style={{
+          width,
+          height,
+          backgroundColor: 'black',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        {/* <ActivityIndicator size="large" /> */}
+        <Image
+          style={{width: 200, height: 200, resizeMode: 'contain'}}
+          source={Logo}
+        />
       </View>
     );
   }
