@@ -9,6 +9,7 @@ const Card = ({
   onPress,
   fromCarousel,
   imageSource,
+  lastIndex,
   imageStyle,
   title,
   titleStyle,
@@ -35,12 +36,22 @@ const Card = ({
       onBlur();
     }
   };
-
+  const killEvent = e => {
+    console.log(e);
+    if (e.nativeEvent.which === 3) {
+      e.nativeEvent.preventDefault();
+    }
+  };
   return (
     <TouchableWithoutFeedback
       onPress={() => onPress(data.video_url)}
       onFocus={handleFocus}
       onBlur={handleBlur}
+      onPressIn={e => {
+        if (index === lastIndex) {
+          killEvent(e);
+        }
+      }}
       onMouseEnter={handleFocus}
       onMouseLeave={handleBlur}>
       <View style={[styles.cardContainer]}>

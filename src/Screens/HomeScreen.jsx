@@ -1,17 +1,12 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Image,
-  Text,
-  ActivityIndicator,
-  Dimensions,
-  ScrollView,
-} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Image, Text, ScrollView, Dimensions} from 'react-native';
+import Carousel from '../Components/Carousel';
 import Tray from '../Components/Tray';
 import useFetch from '../Hooks/useFetch';
 import {cardsApi, catchupApi} from '../constant';
 import HeroBanner from '../Components/HeroBanner';
 import Logo from '../assets/Logituit_logo.png';
+
 const HomeScreen = ({navigation}) => {
   const {width, height} = Dimensions.get('window');
   const {data, loading, error} = useFetch(cardsApi);
@@ -20,20 +15,20 @@ const HomeScreen = ({navigation}) => {
     loading: loadingForCatchup,
     error: errorForCatchup,
   } = useFetch(catchupApi);
-  const [focusedCard, setFocusedCard] = useState(null); // State to store focused card data
+  const [focusedCard, setFocusedCard] = useState(null);
 
+  // Check screen width to determine if the app is running on TV
+  const isTV = width >= 800; // You can adjust this width threshold based on your requirements
   if (loading) {
     return (
       <View
         style={{
           width,
-          height,
-          backgroundColor: 'black',
+          height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        {/* <ActivityIndicator size="large" /> */}
         <Image
           style={{width: 200, height: 200, resizeMode: 'contain'}}
           source={Logo}
@@ -51,21 +46,25 @@ const HomeScreen = ({navigation}) => {
   }
 
   return (
-    <ScrollView>
-      {focusedCard && (
-        <HeroBanner
-          title={focusedCard.thumbnametitle}
-          description={focusedCard.title}
-          imageUrl={
-            focusedCard
-              ? focusedCard?.thumbnail_urls[2]?.img3 ||
-                focusedCard.thumbnail_url
-              : require('../assets/Logituit_logo.png')
-          }
-        />
+    <ScrollView style={{height}}>
+      {isTV ? (
+        focusedCard && (
+          <HeroBanner
+            title={focusedCard.thumbnametitle}
+            description={focusedCard.title}
+            imageUrl={
+              focusedCard
+                ? focusedCard?.thumbnail_urls[2]?.img3 ||
+                  focusedCard.thumbnail_url
+                : require('../assets/Logituit_logo.png')
+            }
+          />
+        )
+      ) : (
+        <Carousel data={data} />
       )}
 
-      <ScrollView style={{marginTop: '30%', marginLeft: '5%'}}>
+      <ScrollView style={{marginTop: isTV && '30%', marginLeft: '5%'}}>
         {!loadingForCatchup && (
           <Tray
             title={'Live'}

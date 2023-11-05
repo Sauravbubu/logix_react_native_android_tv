@@ -27,9 +27,9 @@ const Tray = ({title, cardDataTray, cards, setFocusedCard, onCardBlur}) => {
     }
   };
 
-  const handleCardClick = video_url => {
-    console.log('first clicked')
-    AndroidBridge.openExampleActivity(video_url);
+  const handleCardClick = data => {
+    console.log('first clicked');
+    AndroidBridge.openExampleActivity(data);
   };
   return (
     <View>
@@ -46,6 +46,7 @@ const Tray = ({title, cardDataTray, cards, setFocusedCard, onCardBlur}) => {
       <ScrollView horizontal>
         {cards.map((card, index) => (
           <Card
+            lastIndex={cards.length - 1}
             cardDataTray={cardDataTray}
             key={index}
             data={card}

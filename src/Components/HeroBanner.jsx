@@ -22,11 +22,11 @@ const HeroBanner = ({imageUrl, title, description}) => {
         center={[width + 29, height / 10]}
         radius={width}
       />
-      <View style={styles.textContainer}>
+      <View focusable={false} style={styles.textContainer}>
         <Text style={styles.titleText}>{title}</Text>
         <Text style={styles.descriptionText}>{description}</Text>
       </View>
-      <View style={styles.logoContainer}>
+      <View focusable={false} style={styles.logoContainer}>
         <Image style={styles.logoImage} source={LogoWithText} />
       </View>
     </>
