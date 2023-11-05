@@ -16,7 +16,7 @@ const HomeScreen = ({navigation}) => {
     error: errorForCatchup,
   } = useFetch(catchupApi);
   const [focusedCard, setFocusedCard] = useState(null);
-
+  const onClick = data => {};
   // Check screen width to determine if the app is running on TV
   const isTV = width >= 800; // You can adjust this width threshold based on your requirements
   if (loading) {
@@ -61,7 +61,7 @@ const HomeScreen = ({navigation}) => {
           />
         )
       ) : (
-        <Carousel data={data} />
+        <Carousel onClick={onClick} data={data} />
       )}
 
       <ScrollView style={{marginTop: isTV && '30%', marginLeft: '5%'}}>
