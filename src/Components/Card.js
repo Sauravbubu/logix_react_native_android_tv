@@ -1,8 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from 'react-native';
 import {Color, FontSize} from '../GlobalStyles';
 import {TouchableWithoutFeedback} from 'react-native';
 import Logo from '../assets/Logituit_logo.png';
+const {width, height} = Dimensions.get('window');
 const Card = ({
   data,
   cardDataTray,
@@ -85,8 +93,8 @@ const styles = StyleSheet.create({
     margin: 8,
     shadowColor: 'black',
     shadowRadius: 2,
-    width: 250,
-    height: 200,
+    width: 210,
+    height: 180,
   },
   focused: {
     borderColor: 'white',

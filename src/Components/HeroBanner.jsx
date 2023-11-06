@@ -12,7 +12,7 @@ const HeroBanner = ({imageUrl, title, description}) => {
         <Image
           source={{uri: imageUrl}}
           style={styles.heroBannerImage}
-          resizeMode="cover"
+          resizeMode="contain"
         />
       </View>
       <RadialGradient
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     height: height,
   },
   textContainer: {
-    position: 'relative',
-    top: '40%',
+    position: 'absolute',
+    top: '30%',
     left: '5%',
   },
   titleText: {
@@ -63,10 +63,11 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   logoContainer: {
-    position: 'relative',
+    position: 'absolute',
     width: '7%',
     height: '7%',
     left: '5%',
+    top: '2%',
   },
   logoImage: {
     width: '100%',

@@ -64,7 +64,7 @@ const HomeScreen = ({navigation}) => {
         <Carousel onClick={onClick} data={data} />
       )}
 
-      <ScrollView style={{marginTop: isTV && '30%', marginLeft: '5%'}}>
+      <ScrollView style={{paddingTop: isTV && '40%', marginLeft: '5%'}}>
         {!loadingForCatchup && (
           <Tray
             title={'Live'}
