@@ -12,10 +12,17 @@ import RadialGradient from 'react-native-radial-gradient';
 import Cast from '../assets/cast.png';
 import Logo from '../assets/Logituit_logo.png';
 import {Color, FontSize} from '../GlobalStyles';
+
 const {width, height} = Dimensions.get('window');
+
 const Carousel = ({data, onClick}) => {
-  const {width, height} = Dimensions.get('window');
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleDotPress = index => {
+    setCurrentIndex(index);
+    // You can add any additional functionality here when a dot is pressed
+  };
+
   return (
     <>
       <ScrollView
@@ -48,7 +55,7 @@ const Carousel = ({data, onClick}) => {
               style={{
                 display: 'flex',
                 position: 'absolute',
-                top: '80%',
+                top: '70%',
                 zIndex: 999,
               }}>
               <Text style={styles.title}>{item.thumbnametitle}</Text>
@@ -58,6 +65,22 @@ const Carousel = ({data, onClick}) => {
               <TouchableOpacity onPress={onClick(item)} style={styles.button}>
                 <Text style={styles.buttonText}>Play Now</Text>
               </TouchableOpacity>
+            </View>
+            <View style={styles.dotContainer}>
+              {data.map((_, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={[
+                    styles.dot,
+                    {
+                      backgroundColor:
+                        index === currentIndex ? 'white' : 'gray',
+                      transform: [{scale: index === currentIndex ? 1 : 0.7}],
+                    },
+                  ]}
+                  onPress={() => handleDotPress(index)}
+                />
+              ))}
             </View>
           </View>
         ))}
@@ -91,7 +114,6 @@ const styles = StyleSheet.create({
   description: {
     fontSize: FontSize.androidDescripion_size,
     color: Color.logituitWhite700,
-    // marginLeft: '3%',
   },
   image: {
     width: '100%',
@@ -100,13 +122,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    // marginTop: 10,
     textAlign: 'center',
     color: 'white',
   },
   button: {
-    // marginTop: 20,
-    // backgroundColor: 'white',
     padding: 10,
     borderWidth: 2,
     borderColor: 'white',
@@ -117,6 +136,19 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  dotContainer: {
+    position: 'absolute',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: '90%',
+  },
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    marginHorizontal: 5,
   },
 });
 
