@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Player</string>
+    <string name="welcome_to_video">Welcome to video</string>
+    <string name="duration">duration</string>
+    <string name="in_america_today">In America Today</string>
+    <string name="live">LIVE</string>
+    <string name="title_description">Join Veronica Dudo for an in-depth analysis of daily events from New York.</string>
+    <string name="video_title">Ukraine recaptures seven villages in southeast</string>
+
+    <string name="exit">Exit the application</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="ok_btn">Ok</string>
+    <string name="exit_description">Do you want to exit the app?</string>
+
+    <!--network_screen.xml -->
+    <string name="network">No internet connection</string>
+    <string name="network_description">Please make sure that you are connected to your network.</string>
+
+    <string name="try_again_btn">Try Again</string>
+    <string name="exit_btn">Exit</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="no_internet_description">Please make sure that you are connected to your network</string>
+    <string name="content_description">Content Description</string>
+    <string name="try_again">Try Again</string>
+
+    <!--error_screen.xml -->
+    <string name="we_were_unable_to_process_your_request_please_try_again">We were unable to process your request. Please try again.</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="key_moments">Key Moments</string>
+
+    <string name="quality_auto">Quality: Auto</string>
+    <string name="episodes">Episodes</string>
+    <string name="subtitles_off">Subtitles: Off</string>
+    <string name="skip_recap">Skip Recap</string>
+    <string name="english">English</string>
+    <string name="hindi">Hindi</string>
+    <string name="kannada">Kannada</string>
+    <string name="telugu">Telugu</string>
+    <string name="tamil">Tamil</string>
+    <string name="subtitles">Subtitles</string>
+    <string name="all_episodes">All Episodes</string>
+    <string name="language">Language</string>
+    <string name="quality">Quality</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="description">Big Buck Bunny (code-named Project Peach) is a 2008 short computer-animated comedy film featuring animals of the forest, made by the Blender Institute, part of the Blender Foundation. Like the foundation\'s previous film, Elephants Dream, the film was made using Blender, a free and open-source software application for 3D computer modeling and animation developed by the same foundation. Unlike that earlier project, the tone and visuals departed from a cryptic story and dark visuals to one of comedy, cartoons, and light-heartedness. It was released as an open-source film under the Creative Commons Attribution 2.5 license.</string>
+    <string name="language_english">Language: English</string>
+
+</resources>

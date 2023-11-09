@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_controller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_160dp"
+        android:background="@drawable/overlay_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="@dimen/_160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_35dp"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:singleLine="true"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/video_title"
+        android:textColor="@color/logituit_white"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="@dimen/_160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4dp"
+        android:layout_marginStart="@dimen/_50dp"
+        android:singleLine="true"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/video_title"
+        android:textColor="@color/logituit_white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_language"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:background="@drawable/drawable_bg_button"
+            android:drawableStart="@drawable/drawable_language"
+            android:drawablePadding="@dimen/_10dp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_20dp"
+            android:paddingVertical="@dimen/_4dp"
+            android:text="@string/language_english"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sp"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/btn_quality"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_30dp"
+            android:background="@drawable/drawable_bg_button"
+            android:drawableStart="@drawable/drawable_quality"
+            android:drawablePadding="@dimen/_10dp"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_20dp"
+            android:paddingVertical="@dimen/_4dp"
+            android:text="@string/quality_auto"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12sp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:background="@drawable/overlay_seekbar"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/playPause"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:layout_marginStart="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_478dp"
+        android:background="@drawable/ic_controls_pause_default"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--<SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="@dimen/_796dp"
+        android:layout_height="@dimen/_3dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_490_5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:max="50"
+        android:progress="100"
+        android:progressBackgroundTint="@color/logituit_white_40"
+        android:progressTint="@color/logituit_white"
+        android:thumb="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/playPause"
+        app:layout_constraintTop_toTopOf="parent" />-->
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="780dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="445dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:maxHeight="@dimen/_2dp"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingEnd="@dimen/_10dp"
+        android:progress="100"
+        android:progressBackgroundTint="@color/logituit_white_40"
+        android:progressDrawable="@drawable/seekbar_progress_style"
+        android:progressTint="@color/logituit_white"
+        android:thumb="@drawable/drawable_seekbar"
+        app:layout_constraintStart_toEndOf="@+id/playPause"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/liveTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="486dp"
+        android:drawableStart="@drawable/dotlive"
+        android:drawablePadding="@dimen/_5dp"
+        android:paddingHorizontal="@dimen/_5dp"
+        android:focusable="false"
+        android:background="@drawable/bg_btn_red"
+        android:focusableInTouchMode="false"
+        android:text="@string/live"
+        android:textColor="@color/logituit_white"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_key_moment"
+        android:layout_width="@dimen/_168dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginBottom="@dimen/_42dp"
+        android:background="@drawable/drawable_bg_button"
+        android:drawableStart="@drawable/drawable_key_moment"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:nextFocusLeft="@id/btn_go_live"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:paddingVertical="@dimen/_4dp"
+        android:text="@string/key_moments"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/liveTextView"
+        app:layout_constraintEnd_toEndOf="@+id/liveTextView" />
+
+    <Button
+        android:id="@+id/btn_go_live"
+        android:layout_width="@dimen/_140dp"
+        android:layout_height="@dimen/_30dp"
+        android:layout_marginBottom="@dimen/_42dp"
+        android:background="@drawable/drawable_bg_button"
+        android:drawableStart="@drawable/drawable_go_live"
+        android:drawablePadding="@dimen/_10dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_20dp"
+        android:paddingVertical="@dimen/_4dp"
+        android:text="Go Live"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/liveTextView"
+        app:layout_constraintStart_toStartOf="@+id/playPause" />
+</androidx.constraintlayout.widget.ConstraintLayout>

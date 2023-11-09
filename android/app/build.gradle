@@ -71,13 +71,13 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 android {
     ndkVersion rootProject.ext.ndkVersion
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+     compileSdkVersion 34
 
     namespace "com.demo1"
     defaultConfig {
         applicationId "com.demo1"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 34
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
     }
@@ -115,8 +115,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
-    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+N}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
     }
 

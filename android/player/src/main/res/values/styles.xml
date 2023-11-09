@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--exit screen-->
+    <style name="ok_btn">
+        <item name="android:layout_marginTop">@dimen/_25dp</item>
+        <item name="android:background">@drawable/bg_btn_ok_screen</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/blue_black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="back_btn">
+        <item name="android:layout_marginTop">@dimen/_10dp</item>
+        <item name="android:background">@drawable/bg_btn_exit_screen</item>
+        <item name="android:text">@string/cancel_btn</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="exit_des">
+
+        <item name="android:textColor">@color/logituit_white_70</item>
+        <item name="android:layout_marginTop">@dimen/_12dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="title">
+
+        <item name="android:textColor">@color/logituit_white</item>
+        <item name="android:layout_marginTop">@dimen/_192dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+   <style name="exit">
+        <item name="android:text">@string/exit</item>
+        <item name="android:textColor">@color/logituit_white</item>
+        <item name="android:layout_marginTop">@dimen/_192dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+   <style name="network">
+        <item name="android:text">@string/network</item>
+        <item name="android:textColor">@color/logituit_white</item>
+        <item name="android:layout_marginTop">@dimen/_192dp</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+    <!--activity_home-->
+    <style name="bg_img">
+        <item name="android:focusable">false</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="live_dot">
+        <item name="android:layout_marginTop">@dimen/_100dp</item>
+        <item name="android:layout_marginStart">@dimen/_50dp</item>
+        <item name="android:text">@string/live</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:drawableStart">@drawable/dotlive</item>
+        <item name="android:drawablePadding">@dimen/_10dp</item>
+    </style>
+    <style name="live_heading">
+        <item name="android:layout_marginTop">@dimen/_90dp</item>
+        <item name="android:layout_marginStart">@dimen/_60dp</item>
+        <item name="android:focusable">false</item>
+
+        <item name="android:textSize">24sp</item>
+       <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="live_sub_heading">
+        <item name="android:layout_marginTop">@dimen/_8dp</item>
+        <item name="android:layout_marginStart">@dimen/_60dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/logituit_white_70</item>
+    </style>
+    <style name="live_img">
+        <item name="android:layout_marginTop">@dimen/_80dp</item>
+        <item name="android:layout_marginEnd">@dimen/_25dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/logituit_white_70</item>
+    </style>
+
+    <style name="rail_img">
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="rail_des">
+        <item name="android:background">@drawable/bg_view_state</item>
+        <item name="android:layout_marginTop">@dimen/_9dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/logituit_white_70</item>
+    </style>
+    <style name="rails_duration">
+        <item name="android:background">@drawable/bg_view_state</item>
+        <item name="android:layout_marginTop">@dimen/_6dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/duration</item>
+        <item name="android:textColor">@color/logituit_white_70</item>
+    </style>
+    <!--no_internet_connection-->
+
+    <style name="no_internet">
+        <item name="android:layout_marginTop">@dimen/_200dp</item>
+        <item name="android:background">@drawable/bg_btn_exit_screen</item>
+        <item name="android:focusable">true</item>
+        <item name="android:text">@string/no_internet</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="no_internet_des">
+        <item name="android:layout_marginTop">@dimen/_10dp</item>
+        <item name="android:background">@drawable/bg_btn_exit_screen</item>
+        <item name="android:focusable">true</item>
+        <item name="android:text">@string/no_internet_description</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="try_again_btn">
+        <item name="android:textColor">@color/logituit_white_70</item>
+        <item name="android:text">@string/try_again_btn</item>
+        <item name="android:layout_marginTop">@dimen/_12dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="exit_btn">
+        <item name="android:text">@string/exit_btn</item>
+        <item name="android:textColor">@color/logituit_white</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+
+
+    <style name="CustomExoMediaSeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">@color/logituit_white</item>
+        <item name="android:progressTint">@color/logituit_white_70</item>
+
+
+    </style>
+
+    <style name="CustomPlayer.PlayButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/logituit_white_70</item>
+    </style>
+
+    <style name="CustomPlayer.PauseButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/logituit_white</item>
+    </style>
+
+    <style name="CustomPlayer.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">@color/blue_black</item>
+    </style>
+    <style name="Widget.Theme.TickerNews.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+
+    <style name="RowHeader">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+</resources>

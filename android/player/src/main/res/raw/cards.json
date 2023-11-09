@@ -1,0 +1,90 @@
+[
+{
+"video_id": "202301",
+"media_type": "live",
+"isLIve": true,
+"category": "Big Buck Bunny",
+"title": "featuring animals of the forest, made by the Blender Institute, part of the Blender Foundation",
+"thumbnametitle": "Big Buck Bunny",
+"thumbnail_urls": [
+{
+"img1": "https://i.ytimg.com/vi/Vpg9yizPP_g/mqdefault.jpg"
+},
+{
+"img2": "https://tickernews.co/wp-content/uploads/2023/08/ticker-news-fastapplogo-aug23-403.png"
+},
+{
+"img3": "https://tickernews.co/wp-content/uploads/2023/08/ticker-news-fastapplogo-aug23-1920.png"
+}
+],
+"poster1920x1080_url": "https://i.ytimg.com/vi/Vpg9yizPP_g/mqdefault.jpg",
+"poster800x450_url": "https://i.ytimg.com/vi/Vpg9yizPP_g/mqdefault.jpg",
+"video_url": "http://content.uplynk.com/channel/e4d136bb61b1453a8817dc39c6e90201.m3u8"
+},
+{
+    "video_id": "202302",
+    "media_type": "live",
+    "isLIve": true,
+"category": "Elephants_Dream",
+"title": "Friends Proog and Emo live in a capricious, seemingly infinite machine with a sinister purpose in this experimental computer-animated short",
+"thumbnametitle": "Elephants_Dream",
+"thumbnail_urls": [
+{
+"img1": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Elephants_Dream_f11621.png/120px-Elephants_Dream_f11621.png"
+},
+{
+"img2": "https://tickernews.co/wp-content/uploads/2023/08/DOCOSLOGO-403.png"
+},
+{
+"img3": "https://tickernews.co/wp-content/uploads/2023/08/DOCOSPOSTER-1080.png"
+}
+],
+"poster1920x1080_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Elephants_Dream_f11621.png/120px-Elephants_Dream_f11621.png",
+"poster800x450_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Elephants_Dream_f11621.png/120px-Elephants_Dream_f11621.png",
+"video_url": "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+},
+{
+    "video_id": "202303",
+    "media_type": "live",
+    "isLIve": true,
+"category": "Sintel",
+"title": "A division of the Blender Foundation set up specifically to facilitate the creation of open content films and games.",
+"thumbnametitle": "Sintel",
+"thumbnail_urls": [
+{
+"img1": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sintel_1920x1080.png/1200px-Sintel_1920x1080.png?20120328143811"
+},
+{
+"img2": "https://tickernews.co/wp-content/uploads/2023/08/MONEYLOGO-403.png"
+},
+{
+"img3": "https://tickernews.co/wp-content/uploads/2023/08/MONEYLOGO-1920.png"
+}
+],
+"poster1920x1080_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sintel_1920x1080.png/1200px-Sintel_1920x1080.png?20120328143811",
+"poster800x450_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sintel_1920x1080.png/1200px-Sintel_1920x1080.png?20120328143811",
+"video_url": "https://dai.google.com/linear/hls/pb/event/Sid4xiTQTkCT1SLu6rjUSQ/stream/a51a564f-a193-45c9-9af4-eee47bc3cbe7:TPE2/master.m3u8"
+},
+{
+    "video_id": "202304",
+    "media_type": "live",
+    "isLIve": true,
+"category": "Tears of Steel",
+"title": "Tears of Steel (code-named Project Mango) is a short science fiction film by producer Ton Roosendaal and director/writer Ian Hubert",
+"thumbnametitle": "Tears of Steel",
+"thumbnail_urls": [
+{
+"img1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mRlIROM7cBZbGOPCjSMcgUI2GXkRSIY0o25xR6HbSoAafM3DeYJbL66qVv_HBnbxjOs&usqp=CAU"
+},
+{
+"img2": "https://tickernews.co/wp-content/uploads/2023/08/CHEFLOGO-403.png"
+},
+{
+"img3": "https://tickernews.co/wp-content/uploads/2023/08/CHEFLOGO-1920.png"
+}
+],
+"poster1920x1080_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mRlIROM7cBZbGOPCjSMcgUI2GXkRSIY0o25xR6HbSoAafM3DeYJbL66qVv_HBnbxjOs&usqp=CAU",
+"poster800x450_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mRlIROM7cBZbGOPCjSMcgUI2GXkRSIY0o25xR6HbSoAafM3DeYJbL66qVv_HBnbxjOs&usqp=CAU",
+"video_url": "https://test.spotme.com/hls_benchmark_stream/index.m3u8"
+}
+]

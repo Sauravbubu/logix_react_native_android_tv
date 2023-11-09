@@ -52,7 +52,7 @@ const Card = ({
   };
   return (
     <TouchableWithoutFeedback
-      onPress={() => onPress(data.video_url)}
+      onPress={() => onPress(JSON.stringify(data))}
       onFocus={handleFocus}
       onBlur={handleBlur}
       onPressIn={e => {

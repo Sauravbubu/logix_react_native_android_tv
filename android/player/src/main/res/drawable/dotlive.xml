@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <solid
+        android:color="@color/logituit_white"/>
+
+    <size
+        android:width="8sp"
+        android:height="8sp"/>
+    <padding
+        android:right="14dp" />
+
+
+</shape>

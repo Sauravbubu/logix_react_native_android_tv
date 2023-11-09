@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <!-- Define the background appearance of the progress bar track -->
+            <solid android:color="@color/logituit_white_40" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <!-- Define the appearance of the filled portion of the progress bar track -->
+                <solid android:color="@color/logituit_white" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
